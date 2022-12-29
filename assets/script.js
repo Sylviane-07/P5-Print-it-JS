@@ -35,3 +35,16 @@ console.log("left")
 arrowRight.addEventListener ("click", function() {
 console.log("right")
 })
+
+//Bullet points added by img in slides
+//Active bullet added to frist-child
+function bulletPoints() {
+	const dot = document.createElement("span")
+	dot.classList.add("dot")
+	const dots = document.querySelector("#banner .dots")
+	dots.appendChild(dot)
+	const dotSelected = document.querySelector(".dots :first-child")
+	dotSelected.classList.add("dot_selected")
+}
+
+slides.forEach(bulletPoints)
