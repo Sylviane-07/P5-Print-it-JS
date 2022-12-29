@@ -16,3 +16,10 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+
+// get documents link to variables
+const banner = document.getElementById("banner")
+const arrowLeft = document.getElementById("left_arrow")
+const arrowRight = document.getElementById("right_arrow")
+const mainImg = document.querySelector("#banner > img")
+const mainImgText = document.querySelector("#banner > p")
