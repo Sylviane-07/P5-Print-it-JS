@@ -23,3 +23,15 @@ const arrowLeft = document.getElementById("left_arrow")
 const arrowRight = document.getElementById("right_arrow")
 const mainImg = document.querySelector("#banner > img")
 const mainImgText = document.querySelector("#banner > p")
+
+//slides length => total images counts
+const totalImg = slides.length
+
+//left & right arrows eventListener to call function onclick
+arrowLeft.addEventListener ("click", function() {
+console.log("left")
+})
+
+arrowRight.addEventListener ("click", function() {
+console.log("right")
+})
