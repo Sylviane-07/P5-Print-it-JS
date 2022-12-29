@@ -53,9 +53,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-body {
 
-}
 section {
 	margin-block: 6em;
 }
@@ -121,16 +119,30 @@ header {
 	object-fit: cover;
 	object-position: center;
 }
+
+#banner .active{
+	z-index: 1;
+}
+
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 /* Gestion des fleches du carrousel */
 #banner .arrow {
 	position: absolute;
+	cursor: pointer;
 }
 #banner .arrow_left {
 	left: 10px;
+	z-index: 1;
+    object-fit: contain;
+    width: 25%;
+	height: 100px;
 }
 #banner .arrow_right {
 	right: 10px;
+	z-index: 1;
+    object-fit: contain;
+    width: 25%;
+	height: 100px;
 }
 /* Gestion des points du carrousel */
 .dots {
