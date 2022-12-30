@@ -29,11 +29,11 @@ const totalImg = slides.length;
 
 //left & right arrows eventListener to call function onclick
 arrowLeft.addEventListener ("click", function() {
-console.log("left");
+	moveToPrevSlide();
 });
 
 arrowRight.addEventListener ("click", function() {
-console.log("right");
+	moveToNextSlide();
 });
 
 //Bullet points added by img in slides
@@ -48,3 +48,32 @@ function bulletPoints() {
 }
 
 slides.forEach(bulletPoints);
+
+//Change src for image & tagline
+let i = 0;
+
+function displayImg() {
+ 	mainImg.src = `./assets/images/slideshow/${slides[i].image}`;
+ 	mainImgText.innerHTML = slides[i].tagLine;
+	
+}
+
+
+function moveToNextSlide() {
+	if ( i === totalImg - 1 ) {
+		i = 0
+	} else {
+		i++
+	}
+	displayImg();
+}
+
+function moveToPrevSlide() {
+	if ( i === 0 ) {
+		i = totalImg - 1
+	} else {
+		i--
+	}
+	displayImg();
+}
+
