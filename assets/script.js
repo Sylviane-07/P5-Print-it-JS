@@ -58,7 +58,7 @@ function displayImg() {
 	
 }
 
-
+// setting infinite img & tagline slide
 function moveToNextSlide() {
 	if ( i === totalImg - 1 ) {
 		i = 0
@@ -66,6 +66,7 @@ function moveToNextSlide() {
 		i++
 	}
 	displayImg();
+	activeBullet();
 }
 
 function moveToPrevSlide() {
@@ -75,5 +76,14 @@ function moveToPrevSlide() {
 		i--
 	}
 	displayImg();
+	activeBullet();
 }
 
+//Update active bullet position to match displayed image
+function activeBullet() {
+	const dot = document.getElementsByClassName("dot")
+	for (let i = 0; i < dot.length; i++) {
+		dot[i].classList.remove("dot_selected")
+	}
+	dot[i].classList.add("dot_selected")
+}
